@@ -1,26 +1,23 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import TaskList from '../components/TaskList.vue';
 import TaskDetails from '../components/TaskDetails.vue';
-
-Vue.use(Router);
 
 const routes = [
     {
         path: '/',
-        name: 'TaskList',
+        name: 'task-list',
         component: TaskList,
     },
     {
-        path: '/tasks/:id',
-        name: 'TaskDetails',
+        path: '/task/:id',
+        name: 'task-details',
         component: TaskDetails,
+        props: true,
     },
 ];
 
-const router = new Router({
-    mode: 'history',
-    base: process.env.BASE_URL,
+const router = createRouter({
+    history: createWebHistory(),
     routes,
 });
 

@@ -64,4 +64,21 @@ export default {
     margin-top: 20px;
     font-size: 18px;
 }
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.task-completed {
+    color: green;
+}
+
+
 </style>

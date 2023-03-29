@@ -32,7 +32,7 @@ export default {
             fetch('https://jsonplaceholder.typicode.com/todos')
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data); // dodaj instrukcję console.log, aby sprawdzić, czy dane są pobierane poprawnie
+                    console.log(data); //
                     this.todos = data.slice(0, 20);
                 });
         },
@@ -75,5 +75,9 @@ li {
 
 .task-completed {
     color: green;
+}
+
+.task-completed.false {
+    color: red;
 }
 </style>
